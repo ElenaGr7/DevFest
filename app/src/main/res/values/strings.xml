@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MyHomeWork1</string>
+    <string name="header1">DevFest SPB</string>
+    <string name="header2">Dart: второе пришествие</string>
+    <string name="button_android">Frontend</string>
+    <string name="button_doc2">Все доклады</string>
+    <string name="speaker">EVGENY KOT</string>
+    <string name="description">Привет, я - Кот. И ещё GDE в Dart и Flutter. И работаю во Wrike. Так получилось, что мы используем Dart в течение четырёх лет и написали огромную кучу кода (около 1kk строк). Мы пишем наш сервис используя на фронтенде исключительно в Dart (вообще нет JS). Также есть некоторое количество бекенда, ну и с появлением Flutter мы, конечно, начинаем смотреть на мобильную разработку. Можно без зазрения совести сказать, что мы раньше всех начали использовать этот язык в production разработке. Что же такого поменялось за эти годы в языке, в технологиях и мире, что вам НУЖНО ПОСЛУШАТЬ этот доклад? Вот об этом и поговорим.</string>
+</resources>
