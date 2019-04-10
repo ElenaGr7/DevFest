@@ -3,8 +3,10 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="button_android">#0DACDD</color>
+    <color name="button_android">#0091ea</color>
     <color name="colorBlack">#000000</color>
     <color name="button_text">#FFFFFF</color>
     <color name="colorRed">#FF0000</color>
+    <color name="colorBackground">#084FA4BB</color>
+    <color name="coloProf">#9A61B3</color>
 </resources>
