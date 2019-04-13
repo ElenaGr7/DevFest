@@ -4,6 +4,7 @@ import android.content.Intent
 import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.text.method.ScrollingMovementMethod
 import android.widget.Button
 import android.widget.TextView
 
@@ -14,6 +15,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val textDescriptionAuthor = findViewById<TextView>(R.id.description)
+        textDescriptionAuthor.setMovementMethod(ScrollingMovementMethod())
 
         val linkButton = findViewById<Button>(R.id.button2)
         linkButton.setOnClickListener {
