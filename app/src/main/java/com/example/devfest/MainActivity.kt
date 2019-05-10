@@ -11,6 +11,7 @@ import android.widget.TextView
 class MainActivity : AppCompatActivity() {
 
     val ACTION_OPEN = "com.example.devfest.SHOW_AUTHOR"
+    val ACTION_OPEN_CATALOG = "com.example.devfest.SHOW_CATALOG"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,10 +19,10 @@ class MainActivity : AppCompatActivity() {
         val textDescriptionAuthor = findViewById<TextView>(R.id.description)
         textDescriptionAuthor.setMovementMethod(ScrollingMovementMethod())
 
-        val linkButton = findViewById<Button>(R.id.button2)
-        linkButton.setOnClickListener {
-            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://devfest-spb.com/"))
-            startActivity(browserIntent)
+        val openCatalog = findViewById<Button>(R.id.button2)
+        openCatalog.setOnClickListener {
+            val openCatalogIntent = Intent(ACTION_OPEN_CATALOG)
+            startActivity(openCatalogIntent)
         }
 
         val openAuthor = findViewById<TextView>(R.id.speaker)
