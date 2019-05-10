@@ -21,7 +21,6 @@ public class AuthorsAdapter
     @NonNull
     @Override
     public AuthorsHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        // create a new view
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View itemView = inflater.inflate(R.layout.item_speaker, parent, false);
         return new AuthorsHolder(itemView);
@@ -29,12 +28,11 @@ public class AuthorsAdapter
 
     @Override
     public void onBindViewHolder(@NonNull AuthorsHolder holder, int position) {
-        // get our custom object from our dataset at this position
         Speaker speaker = authors.get(position);
         holder.photoView.setImageResource(speaker.getPhoto());
-        holder.nameView.setText(speaker.getName());
+        /*holder.nameView.setText(speaker.getName());
         holder.profView.setText(speaker.getProf());
-        holder.cityView.setText(speaker.getCity());
+        holder.cityView.setText(speaker.getCity());*/
     }
 
     @Override
@@ -44,14 +42,14 @@ public class AuthorsAdapter
 
     static class AuthorsHolder extends RecyclerView.ViewHolder {
         final ImageView photoView;
-        final TextView nameView, profView, cityView;
+        /*final TextView nameView, profView, cityView;*/
         AuthorsHolder(View itemView){
             super(itemView);
             photoView = (ImageView)itemView.findViewById(R.id.photo);
-            nameView = (TextView) itemView.findViewById(R.id.name);
+           /* nameView = (TextView) itemView.findViewById(R.id.name);
             profView = (TextView) itemView.findViewById(R.id.prof);
-            cityView = (TextView) itemView.findViewById(R.id.city);
+            cityView = (TextView) itemView.findViewById(R.id.city);*/
         }
-            }
-        }
+    }
+}
 
