@@ -31,10 +31,10 @@ public class AuthorsAdapter
     public void onBindViewHolder(@NonNull AuthorsHolder holder, int position) {
         // get our custom object from our dataset at this position
         Speaker speaker = authors.get(position);
-        holder.photoView.setImageResource(Speaker.getPhoto());
-        holder.nameView.setText(Speaker.getName());
-        holder.profView.setText(Speaker.getProf());
-        holder.cityView.setText(Speaker.getCity());
+        holder.photoView.setImageResource(speaker.getPhoto());
+        holder.nameView.setText(speaker.getName());
+        holder.profView.setText(speaker.getProf());
+        holder.cityView.setText(speaker.getCity());
     }
 
     @Override
