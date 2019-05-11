@@ -2,18 +2,17 @@
 
 <android.support.constraint.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
-                                             xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-                                             android:layout_height="match_parent"
-                                             xmlns:app="http://schemas.android.com/apk/res-auto">
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:padding="20dp">
     <ImageView
             android:id="@+id/photo"
-            android:layout_width="30dp"
-            android:layout_height="100dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:src="@drawable/telegram"
             app:layout_constraintLeft_toLeftOf="parent"
             tools:ignore="MissingConstraints"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
             android:contentDescription="@string/photo"
     />
 
@@ -21,8 +20,7 @@
             android:id="@+id/name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
             android:text="@string/speaker"
             android:textSize="30sp"
             app:layout_constraintLeft_toRightOf="@id/photo"
@@ -32,8 +30,7 @@
             android:id="@+id/prof"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
             android:text="@string/prof"
             app:layout_constraintLeft_toRightOf="@id/name"
             tools:ignore="MissingConstraints" />
@@ -42,7 +39,7 @@
             android:id="@+id/city"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="5dp"
             android:text="@string/adres"
             app:layout_constraintTop_toBottomOf="@id/prof"
