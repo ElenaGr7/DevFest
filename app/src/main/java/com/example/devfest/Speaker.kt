@@ -10,7 +10,7 @@ public class Speaker  {
     private var city: String? = null
     private var photo: Int = 0
 
-    fun Speaker(name: String, prof: String, city: String, photo: Int){
+    constructor(name: String, prof: String, city: String, photo: Int){
 
         this.name = name
         this.prof = prof

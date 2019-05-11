@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.List;
 
@@ -30,9 +31,9 @@ public class AuthorsAdapter
     public void onBindViewHolder(@NonNull AuthorsHolder holder, int position) {
         Speaker speaker = authors.get(position);
         holder.photoView.setImageResource(speaker.getPhoto());
-        /*holder.nameView.setText(speaker.getName());
+        holder.nameView.setText(speaker.getName());
         holder.profView.setText(speaker.getProf());
-        holder.cityView.setText(speaker.getCity());*/
+        holder.cityView.setText(speaker.getCity());
     }
 
     @Override
@@ -42,13 +43,13 @@ public class AuthorsAdapter
 
     static class AuthorsHolder extends RecyclerView.ViewHolder {
         final ImageView photoView;
-        /*final TextView nameView, profView, cityView;*/
+        final TextView nameView, profView, cityView;
         AuthorsHolder(View itemView){
             super(itemView);
             photoView = (ImageView)itemView.findViewById(R.id.photo);
-           /* nameView = (TextView) itemView.findViewById(R.id.name);
-            profView = (TextView) itemView.findViewById(R.id.prof);
-            cityView = (TextView) itemView.findViewById(R.id.city);*/
+            nameView = (TextView)itemView.findViewById(R.id.name);
+            profView = (TextView)itemView.findViewById(R.id.prof);
+            cityView = (TextView)itemView.findViewById(R.id.city);
         }
     }
 }
