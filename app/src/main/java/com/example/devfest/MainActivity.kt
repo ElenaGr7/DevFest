@@ -10,8 +10,8 @@ import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
 
-    val ACTION_OPEN = "com.example.devfest.SHOW_AUTHOR"
-    val ACTION_OPEN_CATALOG = "com.example.devfest.SHOW_CATALOG"
+    private val ACTION_OPEN = "com.example.devfest.SHOW_AUTHOR"
+    private val ACTION_OPEN_CATALOG = "com.example.devfest.SHOW_CATALOG"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
