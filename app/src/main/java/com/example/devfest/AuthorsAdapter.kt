@@ -9,10 +9,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.support.v4.content.ContextCompat.startActivity
-
-
-
 
 class AuthorsAdapter internal constructor(private val authors: List<Speaker>) :
     RecyclerView.Adapter<AuthorsAdapter.AuthorsHolder>() {

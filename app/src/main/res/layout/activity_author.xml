@@ -8,37 +8,39 @@
         tools:context=".Author"
         android:background="@drawable/grad_green"
 >
-
-    <android.support.constraint.ConstraintLayout
+    <View
             android:layout_marginTop="5dp"
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="5dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context=".Author"
-    android:background="@drawable/image_oval">
+    android:background="@drawable/image_oval"
+    />
 
-    <ImageView
-            android:id="@+id/image1"
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/speaker"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginTop="28dp"
-            android:background="@drawable/evgenykot"
-            android:contentDescription="@string/speaker"
+            android:src="@drawable/evgenykot"
+            app:civ_border_color="@color/coloProf"
+            app:civ_border_width="2dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginStart="30dp"/>
+            android:layout_marginStart="30dp"
+            android:contentDescription="@string/speaker"
+    />
 
-    <ImageView
-            android:id="@+id/speaker"
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/flag"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:src="@drawable/flag_rus"
-            app:layout_constraintBottom_toBottomOf="@id/image1"
-            app:layout_constraintRight_toRightOf="@id/image1"
+            app:layout_constraintBottom_toBottomOf="@id/speaker"
+            app:layout_constraintRight_toRightOf="@id/speaker"
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="5dp"
-            android:contentDescription="@string/speaker"
+            android:contentDescription="@string/flag"
     />
 
     <TextView
@@ -46,7 +48,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/speaker"
-            app:layout_constraintLeft_toRightOf="@id/image1"
+            app:layout_constraintLeft_toRightOf="@id/speaker"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="28dp"
             android:layout_marginStart="20dp"
@@ -59,7 +61,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/prof"
-            app:layout_constraintLeft_toRightOf="@id/image1"
+            app:layout_constraintLeft_toRightOf="@id/speaker"
             app:layout_constraintTop_toBottomOf="@id/speakerName"
             android:layout_marginStart="20dp"
             android:textSize="15sp"
@@ -72,7 +74,7 @@
             android:layout_height="wrap_content"
             android:text="@string/adres"
             android:textSize="15sp"
-            app:layout_constraintLeft_toRightOf="@id/image1"
+            app:layout_constraintLeft_toRightOf="@id/speaker"
             app:layout_constraintTop_toBottomOf="@id/prof"
             android:layout_marginStart="20dp"
     />
@@ -83,8 +85,8 @@
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:src="@drawable/telegram"
-            app:layout_constraintLeft_toRightOf="@id/image1"
-            app:layout_constraintBottom_toBottomOf="@id/speaker"
+            app:layout_constraintLeft_toRightOf="@id/speaker"
+            app:layout_constraintBottom_toBottomOf="@id/flag"
             android:layout_marginStart="20dp"
             android:contentDescription="@string/telegram"
     />
@@ -95,7 +97,7 @@
             android:layout_height="20dp"
             android:src="@drawable/twitter"
             app:layout_constraintLeft_toRightOf="@id/telegram"
-            app:layout_constraintBottom_toBottomOf="@id/speaker"
+            app:layout_constraintBottom_toBottomOf="@id/flag"
             android:layout_marginStart="5dp"
             android:contentDescription="@string/twitter"
     />
@@ -109,7 +111,7 @@
             android:text="@string/descriptionAuthor"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/image1"
+            app:layout_constraintTop_toBottomOf="@id/speaker"
             app:layout_constraintBottom_toTopOf="@id/grey"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
@@ -118,74 +120,76 @@
             android:textSize="20sp"
             android:scrollbars="vertical"
     />
-    <android.support.constraint.ConstraintLayout
-            android:id="@+id/grey"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            tools:context=".Author"
-            android:background="@color/colorBackground"
-            android:padding="20dp"
-    >
-
-        <TextView
-                android:id="@+id/header2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/header2"
-                app:layout_constraintBottom_toTopOf="@id/room"
-                app:layout_constraintLeft_toLeftOf="parent"
-                android:textStyle="bold"
-                android:textSize="25sp"
-        />
-
-        <TextView
-                android:id="@+id/room"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/room"
-                app:layout_constraintBottom_toTopOf="@id/type"
-                app:layout_constraintLeft_toLeftOf="parent"
-                android:layout_marginBottom="10dp"
-                android:textSize="15sp"
-        />
-
-        <TextView
-                android:id="@+id/time"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/time"
+        <View
+                android:id="@+id/grey"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                android:textSize="30sp"
+                android:layout_height="188dp"
+                android:layout_width="match_parent"
+                tools:context=".Author"
+                android:background="@color/colorBackground"
         />
-        <TextView
-                android:id="@+id/type"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/button_android"
-                app:layout_constraintBottom_toTopOf="@id/time"
-                app:layout_constraintLeft_toLeftOf="parent"
-                android:layout_marginBottom="10dp"
-                android:textSize="15sp"
-                android:textColor="@color/button_text"
-                android:background="@drawable/button"
-                android:padding="5dp"
-        />
-        <TextView
-                android:id="@+id/date"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/date"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toRightOf="@id/time"
-                android:layout_marginStart="10dp"
-                android:textSize="20sp"
-                android:textColor="@color/coloProf"
-                android:textStyle="bold"
-        />
-    </android.support.constraint.ConstraintLayout>
 
-</android.support.constraint.ConstraintLayout>
+            <TextView
+                    android:id="@+id/header2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/header2"
+                    app:layout_constraintBottom_toTopOf="@id/room"
+                    app:layout_constraintLeft_toLeftOf="@id/grey"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    android:layout_marginStart="20dp"
+            />
+
+            <TextView
+                    android:id="@+id/room"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/room"
+                    app:layout_constraintBottom_toTopOf="@id/type"
+                    app:layout_constraintLeft_toLeftOf="@id/grey"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="15sp"
+                    android:layout_marginStart="20dp"
+            />
+
+            <TextView
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/time"
+                    app:layout_constraintBottom_toBottomOf="@id/grey"
+                    app:layout_constraintLeft_toLeftOf="@id/grey"
+                    android:textSize="30sp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginBottom="20dp"
+            />
+            <TextView
+                    android:id="@+id/type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/button_android"
+                    app:layout_constraintBottom_toTopOf="@id/time"
+                    app:layout_constraintLeft_toLeftOf="@id/grey"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="15sp"
+                    android:textColor="@color/button_text"
+                    android:background="@drawable/button"
+                    android:padding="5dp"
+                    android:layout_marginStart="20dp"
+            />
+            <TextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/date"
+                    app:layout_constraintBottom_toBottomOf="@id/grey"
+                    app:layout_constraintLeft_toRightOf="@id/time"
+                    android:layout_marginStart="10dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/coloProf"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="20dp"
+            />
 
         </android.support.constraint.ConstraintLayout>

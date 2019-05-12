@@ -4,7 +4,7 @@
     <string name="header1">DevFest SPB</string>
     <string name="header2">Dart: второе пришествие</string>
     <string name="button_android">Frontend</string>
-    <string name="button_doc2">Все доклады</string>
+    <string name="button_doc2">Все Спикеры</string>
     <string name="speaker">EVGENY KOT</string>
     <string name="prof">Teamlead at Wrike</string>
     <string name="adres">St. Petersburg, Russia</string>
@@ -14,6 +14,7 @@
     <string name="date">27 November</string>
     <string name="photo">photo</string>
     <string name="room">Room2</string>
+    <string name="flag">Флаг</string>
     <string name="description1">Привет, я - Кот. И ещё GDE в Dart и Flutter. И работаю во Wrike. Так получилось, что мы
         используем Dart в течение четырёх лет и написали огромную кучу кода (около 1kk строк). Мы пишем наш сервис
         используя на фронтенде исключительно в Dart (вообще нет JS). Также есть некоторое количество бекенда, ну и с
