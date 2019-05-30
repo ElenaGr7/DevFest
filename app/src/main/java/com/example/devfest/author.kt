@@ -36,7 +36,36 @@ class Author : AppCompatActivity() {
             startActivity(openLectureIntent)
         }
 
+        /*val lectures = generateLecture()
+        compare(lectures)*/
+        val id = intent.getStringExtra("id")
+        val lectureView = findViewById<View>(R.id.lecture) as TextView
+        lectureView.text = id
     }
+
+    /*fun compare(lectures: List<Lecture>){
+        var i: Int = 1;
+        var x: Int = 0;
+        val intent = intent
+        val id = intent.getStringExtra("id")
+        while ((i <= lectures.size) && (x==0)) {
+            if (lectures[i].lecture == id) {
+                x = 1
+                i = i+1
+                val lectureView = findViewById<View>(R.id.lecture) as TextView
+                val roomView = findViewById<View>(R.id.room) as TextView
+                val timeView = findViewById<View>(R.id.time) as TextView
+                val dateView = findViewById<View>(R.id.date) as TextView
+                val type = findViewById<View>(R.id.type) as TextView
+                lectureView.text = lectures[i].lecture
+                roomView.text = lectures[i].room
+                timeView.text = lectures[i].time
+                dateView.text = lectures[i].date
+                type.text = lectures[i].type
+            }
+        }
+    }*/
+
     fun generateLecture(): kotlin.collections.List<Lecture> {
         val lectures = ArrayList<Lecture>()
         lectures.add(Lecture("name1", "22", "22:00", "30 November", "Andriod"))

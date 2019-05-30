@@ -12,7 +12,6 @@ class Catalog : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_catalog)
-
         val authors = generateAuthors()
         val recyclerView = findViewById<RecyclerView>(R.id.list) as RecyclerView
         val adapter = AuthorsAdapter(authors)

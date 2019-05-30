@@ -17,12 +17,6 @@ class AuthorsAdapter internal constructor(private val authors: List<Speaker>) :
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AuthorsHolder {
         val inflater = LayoutInflater.from(parent.context)
         val itemView = inflater.inflate(R.layout.item_speaker, parent, false)
-        val ACTION_OPEN = "com.example.devfest.SHOW_AUTHOR"
-        itemView.setOnClickListener {
-            //val intent = Intent(ACTION_OPEN)
-            //intent.putExtra("id", authors.name)
-            itemView.getContext().startActivity(Intent(ACTION_OPEN))
-        }
         return AuthorsHolder(itemView)
     }
 
@@ -32,6 +26,13 @@ class AuthorsAdapter internal constructor(private val authors: List<Speaker>) :
         holder.nameView.text = speaker.name
         holder.profView.text = speaker.prof
         holder.cityView.text = speaker.city
+
+        val ACTION_OPEN = "com.example.devfest.SHOW_AUTHOR"
+        holder.itemView.setOnClickListener {
+            val intent = Intent(ACTION_OPEN)
+            intent.putExtra("id", speaker.name)
+            holder.itemView.getContext().startActivity(Intent(ACTION_OPEN))
+        }
     }
 
     override fun getItemCount(): Int {
@@ -48,7 +49,6 @@ class AuthorsAdapter internal constructor(private val authors: List<Speaker>) :
             nameView = itemView.findViewById<View>(R.id.name) as TextView
             profView = itemView.findViewById<View>(R.id.prof) as TextView
             cityView = itemView.findViewById<View>(R.id.city) as TextView
-
         }
     }
 }
