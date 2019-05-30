@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import java.util.ArrayList
 
 class AuthorsAdapter internal constructor(private val authors: List<Speaker>) :
     RecyclerView.Adapter<AuthorsAdapter.AuthorsHolder>() {
@@ -16,6 +17,12 @@ class AuthorsAdapter internal constructor(private val authors: List<Speaker>) :
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AuthorsHolder {
         val inflater = LayoutInflater.from(parent.context)
         val itemView = inflater.inflate(R.layout.item_speaker, parent, false)
+        val ACTION_OPEN = "com.example.devfest.SHOW_AUTHOR"
+        itemView.setOnClickListener {
+            //val intent = Intent(ACTION_OPEN)
+            //intent.putExtra("id", authors.name)
+            itemView.getContext().startActivity(Intent(ACTION_OPEN))
+        }
         return AuthorsHolder(itemView)
     }
 
@@ -36,16 +43,12 @@ class AuthorsAdapter internal constructor(private val authors: List<Speaker>) :
         val nameView: TextView
         val profView: TextView
         val cityView: TextView
-        private val ACTION_OPEN = "com.example.devfest.SHOW_AUTHOR"
         init {
             photoView = itemView.findViewById<View>(R.id.photo) as ImageView
             nameView = itemView.findViewById<View>(R.id.name) as TextView
             profView = itemView.findViewById<View>(R.id.prof) as TextView
             cityView = itemView.findViewById<View>(R.id.city) as TextView
 
-            itemView.setOnClickListener {
-                itemView.getContext().startActivity(Intent(ACTION_OPEN))
-            }
         }
     }
 }

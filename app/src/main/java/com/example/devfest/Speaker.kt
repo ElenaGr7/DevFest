@@ -11,8 +11,9 @@ class Speaker(
 }
 
 class Lecture(
-    var name: String? = null,
-    var prof: String? = null,
-    var city: String? = null,
-    var photo: Int = 0) {
+    var lecture: String? = null,
+    var room: String? = null,
+    var time: String? = null,
+    var date: String? = null,
+    var type: String? = null) {
 }

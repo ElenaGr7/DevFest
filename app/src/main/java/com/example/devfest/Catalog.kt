@@ -13,14 +13,12 @@ class Catalog : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_catalog)
 
-        val authors = generatAuthors()
+        val authors = generateAuthors()
         val recyclerView = findViewById<RecyclerView>(R.id.list) as RecyclerView
         val adapter = AuthorsAdapter(authors)
         recyclerView.adapter = adapter
-
     }
-
-    fun generatAuthors(): kotlin.collections.List<Speaker> {
+    fun generateAuthors(): kotlin.collections.List<Speaker> {
         val authors = ArrayList<Speaker>()
         authors.add(Speaker("name1", "prof", "city", R.drawable.evgenykot))
         authors.add(Speaker("name2", "prof", "city", R.drawable.evgenykot))

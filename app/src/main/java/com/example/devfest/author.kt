@@ -9,6 +9,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.ImageView
+import java.util.ArrayList
 
 class Author : AppCompatActivity() {
 
@@ -35,5 +36,24 @@ class Author : AppCompatActivity() {
             startActivity(openLectureIntent)
         }
 
+    }
+    fun generateLecture(): kotlin.collections.List<Lecture> {
+        val lectures = ArrayList<Lecture>()
+        lectures.add(Lecture("name1", "22", "22:00", "30 November", "Andriod"))
+        lectures.add(Lecture("name2", "22", "22:00", "30 November", "Andriod"))
+        lectures.add(Lecture("name3", "22", "22:00", "30 November", "Andriod"))
+        lectures.add(Lecture("name4", "22", "22:00", "30 November", "Andriod"))
+        lectures.add(Lecture("name5", "22", "22:00", "30 November", "Andriod"))
+        lectures.add(Lecture("name6", "22", "22:00", "30 November", "Andriod"))
+        lectures.add(Lecture("name7", "22", "22:00", "30 November", "Andriod"))
+        lectures.add(Lecture("name8", "22", "22:00", "30 November", "Andriod"))
+        lectures.add(Lecture("name9", "22", "22:00", "30 November", "Andriod"))
+        lectures.add(Lecture("name12", "22", "22:00", "30 November", "Andriod"))
+        lectures.add(Lecture("name13", "22", "22:00", "30 November", "Andriod"))
+        lectures.add(Lecture("name14", "22", "22:00", "30 November", "Andriod"))
+        lectures.add(Lecture("name15", "22", "22:00", "30 November", "Andriod"))
+        lectures.add(Lecture("name16", "22", "22:00", "30 November", "Andriod"))
+
+        return lectures
     }
 }
