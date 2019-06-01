@@ -38,20 +38,24 @@ class Author : AppCompatActivity() {
 
         /*val lectures = generateLecture()
         compare(lectures)*/
-        val id = intent.getStringExtra("id")
-        val lectureView = findViewById<View>(R.id.lecture) as TextView
+        intent = getIntent()
+        //val id = intent.getStringExtra("test_id")
+
+        val id = test2
+
+        val lectureView = findViewById<TextView>(R.id.lecture)
         lectureView.text = id
     }
 
     /*fun compare(lectures: List<Lecture>){
-        var i: Int = 1;
+        var i: Int = 0;
         var x: Int = 0;
         val intent = intent
         val id = intent.getStringExtra("id")
         while ((i <= lectures.size) && (x==0)) {
             if (lectures[i].lecture == id) {
                 x = 1
-                i = i+1
+                i++
                 val lectureView = findViewById<View>(R.id.lecture) as TextView
                 val roomView = findViewById<View>(R.id.room) as TextView
                 val timeView = findViewById<View>(R.id.time) as TextView

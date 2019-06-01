@@ -8,6 +8,8 @@ import android.text.method.ScrollingMovementMethod
 import android.widget.Button
 import android.widget.TextView
 
+var test2: String? = "t"
+
 class MainActivity : AppCompatActivity() {
 
     private val ACTION_OPEN = "com.example.devfest.SHOW_AUTHOR"
