@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 
 class Speaker(
+    var id: Int = 0,
     var name: String? = null,
     var prof: String? = null,
     var city: String? = null,
@@ -11,6 +12,7 @@ class Speaker(
 }
 
 class Lecture(
+    var id: Int = 0,
     var lecture: String? = null,
     var room: String? = null,
     var time: String? = null,

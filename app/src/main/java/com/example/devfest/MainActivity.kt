@@ -8,7 +8,7 @@ import android.text.method.ScrollingMovementMethod
 import android.widget.Button
 import android.widget.TextView
 
-var test2: String? = "t"
+var id: Int = 0
 
 class MainActivity : AppCompatActivity() {
 
