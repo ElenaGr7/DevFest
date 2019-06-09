@@ -19,6 +19,7 @@ class Catalog : AppCompatActivity() {
     }
     fun generateAuthors(): kotlin.collections.List<Speaker> {
         val authors = ArrayList<Speaker>()
+        authors.add(Speaker(0,"name0", "prof", "city", R.drawable.evgenykot))
         authors.add(Speaker(1,"name1", "prof", "city", R.drawable.evgenykot))
         authors.add(Speaker(2,"name2", "prof", "city", R.drawable.evgenykot))
         authors.add(Speaker(3,"name3", "prof", "city", R.drawable.evgenykot))

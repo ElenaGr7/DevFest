@@ -39,7 +39,7 @@ class Author : AppCompatActivity() {
         /*val lectures = generateLecture()
         compare(lectures)*/
         //intent = getIntent()
-        //val id = intent.getStringExtra("test_id")
+        //val id = intent.getStringExtra(AuthorsAdapter.test_id)
         //val lectureView = findViewById<TextView>(R.id.lecture)
         //lectureView.text = id
         val lectures = generateLecture()
@@ -61,6 +61,7 @@ class Author : AppCompatActivity() {
 
     fun generateLecture(): kotlin.collections.List<Lecture> {
         val lectures = ArrayList<Lecture>()
+        lectures.add(Lecture(0,"name0", "20 room", "22:00", "30 November", "LIVE"))
         lectures.add(Lecture(1,"name1", "21 room", "21:00", "30 November", "Andriod"))
         lectures.add(Lecture(2,"name2", "22 room", "22:00", "25 November", "Kotlin"))
         lectures.add(Lecture(3,"name3", "23 room", "23:00", "24 November", "Java"))

@@ -14,6 +14,8 @@ import java.util.ArrayList
 class AuthorsAdapter internal constructor(private val authors: List<Speaker>) :
     RecyclerView.Adapter<AuthorsAdapter.AuthorsHolder>() {
 
+    //var test_id: String = "test_id"
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AuthorsHolder {
         val inflater = LayoutInflater.from(parent.context)
         val itemView = inflater.inflate(R.layout.item_speaker, parent, false)
@@ -29,7 +31,7 @@ class AuthorsAdapter internal constructor(private val authors: List<Speaker>) :
         val ACTION_OPEN = "com.example.devfest.SHOW_AUTHOR"
         holder.itemView.setOnClickListener {
             //val intent = Intent(ACTION_OPEN)
-            //intent.putExtra("test_id", speaker.name)
+            //intent.putExtra(test_id, speaker.name)
             id = speaker.id
             holder.itemView.getContext().startActivity(Intent(ACTION_OPEN))
         }
